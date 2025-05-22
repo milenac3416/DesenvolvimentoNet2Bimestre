@@ -6,7 +6,7 @@ let refrigerantes = document.querySelector("#refrigerantes");
 let botao = document.querySelector("#botao");
 let total = document.querySelector("#total");
 
-botao.onclick = function () {
+function somarpedido (){
   let refri = Number(refrigerantes.value);
   let valorTotal = 4 * 12 + refri * 7;
 
@@ -18,4 +18,7 @@ botao.onclick = function () {
     sabor4.value + "<br>" +
     "Refrigerantes: " + refri + "<br>" +
     "Total: R$ " + valorTotal;
+}
+botao.onclick = function (){
+  somarpedido();
 }
