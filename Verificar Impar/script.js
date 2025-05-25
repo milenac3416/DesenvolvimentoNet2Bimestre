@@ -1,19 +1,12 @@
 let valor1 = document.querySelector("#valor1");
-let valor2 = document.querySelector("#valor2");
-let valor3 = document.querySelector("#valor3");
-let valor4 = document.querySelector("#valor4");
 let botao = document.querySelector("#botao");
-let resultado = document.querySelector("#resultado");
+let resultato = document.querySelector("#resultado");
 
-function calcular (){
+function verificar (){
     let v1 = Number(valor1.value);
-    let v2 = Number(valor2.value);
-    let v3 = Number(valor3.value);
-    let v4 = Number(valor4.value);
+    let mensagens = ["Não é ímpar", "É ímpar"];
+    resultado.textContent = mensagens[Math.abs(v1 % 2)];
 
-    resultado.textContent = Math.min (v1, v2, v3, v4);
-
-}
+   }
 botao.onclick = function(){
-    calcular ();
-}
+    verificar();}
